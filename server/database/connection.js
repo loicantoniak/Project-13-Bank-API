@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
+const dotEnv = require('dotenv')
+dotEnv.config()
+
 const databaseUrl =
-  process.env.DATABASE_URL || 'mongodb://localhost/argentBankDB'
+  process.env.DATABASE_URL
 
 module.exports = async () => {
   try {
